@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "publicus",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-08-15",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "p.rokoucha.net", "custom_domain": true }],
+  "vars": {
+    "PUBLIC_ORIGIN": "https://p.rokoucha.net",
+    "ACCESS_ISSUER": "https://rokoucha.cloudflareaccess.com",
+    "ADMIN_AUDIENCE": "33a46ba32af2947419bb66e7023b656a74bd6b14929f1015f7152c9c8ed8f4a9",
+    "API_AUDIENCE": "f98c34d080390c7e712376c6e39d6f452fb5bc766a6bd0e2241fb39af68f5a90",
+    "MCP_AUDIENCE": "7db103d8ea5c6de760867b52d15b41f07f3ff686a7ea227b457836971ac5d764"
+  },
+  "assets": { "directory": "./assets", "binding": "ASSETS", "run_worker_first": true },
+  "r2_buckets": [{ "binding": "FILES", "bucket_name": "publicus" }]
+}

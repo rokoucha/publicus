@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publicus</title>
+  <link rel="stylesheet" href="/admin/style.css">
+  <script type="module" src="/admin/app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Publicus</h1>
+      <a href="/cdn-cgi/access/logout">ログアウト</a>
+    </header>
+    <form id="upload">
+      <label for="file">共有するファイル</label>
+      <div class="actions">
+        <input id="file" type="file" required>
+        <button type="submit">アップロード</button>
+      </div>
+    </form>
+    <p id="status" role="status"></p>
+    <output id="published" hidden></output>
+    <section aria-labelledby="files-title">
+      <h2 id="files-title">共有ファイル</h2>
+      <ul id="files"></ul>
+      <button id="more" type="button" hidden>さらに表示</button>
+    </section>
+  </main>
+</body>
+</html>
